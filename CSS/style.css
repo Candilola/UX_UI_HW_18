@@ -25,19 +25,19 @@ h6 {
 }
 
 h1 {
-    font-size: 40pt;
+    font-size: 40px;
     font-weight: 100;
 }
 
 h2 {
     font-family: var(--font-body);
-    font-size: 20pt;
+    font-size: 20px;
     font-weight: 100;
 }
 
 h4{
     color: #707070;
-    font-size: 24pt;
+    font-size: 24px;
     font-weight: 100;
     padding-bottom: 12px;
     line-height: 97%;
@@ -46,7 +46,7 @@ h4{
 h5{
     color: #707070;
     font-family: var(--font-body);
-    font-size: 18pt;
+    font-size: 18px;
     font-weight: 100;
     text-transform: uppercase;
     line-height: 97%;
@@ -60,11 +60,11 @@ h6{
 
 }
 
-p1{
+p{
     color: #707070;
     line-height: 98%;
     padding-bottom: 12px;
-    font-size: 16pt;
+    font-size: 16px;
 }
 
 p,
@@ -74,7 +74,7 @@ li {
 
 p{
     color: black;
-    text-align: center;
+    text-align: left;
 }
 
 html,
@@ -92,7 +92,7 @@ body {
     color: white;
 }
 .primary-button {
-    font-size: 18pt;
+    font-size: 18px;
     font-weight: 600;
     background-color: var(--primary);
     font-family: var(--font-body);
@@ -164,9 +164,13 @@ nav .logo-star {
     padding: 0px 40px;
     transition: 0.24s;
 }
+
+#burger-menu {
+    display: none;
+}
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(12, minmax(10px, 1fr));
     grid-template-rows: auto;
     padding: 5% 10%;
 }
@@ -237,7 +241,7 @@ nav .logo-star {
 .cs-box3{
     grid-area: 1 / 5 / span 4 / span 4;
     padding: 0% 0% 5% 0;
-    background-color: #CBE8D4;
+    background-color: var(--secondary);
     padding: 16px;
     height: fit-content;
     min-width: 200px;
@@ -330,53 +334,101 @@ footer .link {
       }
   }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 720px) and (min-device-width:320px) {
 
+    .main-grid {
+        grid-template-columns: repeat(4,1fr);
+        padding: 2% 4%; 
+    }   
 
-.main-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: auto;
-    padding: 2% 2%; 
-}   
+    .header-title{
+        transform: translateY(-10%);
+    }
+    .header-image{
+        display: none;
+    }
 
-.header-title{
-    transform: translateY(-10%);
-}
-.header-image{
+    .header-title{
+        grid-area: 1 / 1 / span 1 / span 4;
+        padding: 0% 0% 5% 0;
+    }
+    .header-subhead{
+        grid-area: 2 / 1 / span 1 / span 4;
+        padding: 0% 0% 5% 0;
+    }
+    .header-button{
+        grid-area: 3 / 1 / span 1 / span 4;
+        padding: 0% 0% 5% 0;
+    }
+    
+    .button-nav {
+        display: none;
+    }
+
+    #burger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }    
+
+    .toplogo {
     display: none;
-}
-
-.header-title{
-    grid-area: 1 / 1 / span 1 / span 4;
-    padding: 0% 0% 5% 0;
-}
-.header-subhead{
-    grid-area: 2 / 1 / span 1 / span 4;
-    padding: 0% 0% 5% 0;
-}
-.header-button{
-    grid-area: 3 / 1 / span 1 / span 4;
-    padding: 0% 0% 5% 0;
-}
-h1 {
-    font-size: 32pt;
-}
-h2 {
-    font-size: 12pt;
-}
-.toplogo {
-    display: none;
-}
-.logo-mobile{
+    }
+    .logo-mobile{
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 
-}
-.logo-star {
+    }
+    .logo-star {
     font-size: 24pt;
     padding-left: 4px;
+    }
+   .CS-container{
+       padding: 0% 5% 0% 5%;
+       
+   }
+   .cs-box1{
+       margin-left: 0;
+       transform: translateY(0);
+   }
+   .cs-box2{
+    margin-right: 0;
+    }
+.cs-box3{
+    margin-right: 0;
+    margin-left: 0;
+    transform: translateY(0);
+    }
+}
 
-}}
+@media only screen and (min-device-width:721px) and (max-device-width: 1200px) {
+
+    h1 {
+       font-size: 3.5rem; 
+
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+    }
+
+  
+    h6 {
+
+    }
+
+}
