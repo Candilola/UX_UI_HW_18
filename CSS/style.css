@@ -165,9 +165,32 @@ nav .logo-star {
     transition: 0.24s;
 }
 
-#burger-menu {
+.topnav a.icon {
     display: none;
 }
+/* #myLinks {
+    display: none; */
+}
+.topnav {
+    overflow: hidden;
+    background-color: var(--primary);
+    /* position: relative; */
+  }
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    /* display: block; */
+  }
+.topnav a.icon {
+
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }  
+
 .main-grid {
     display: grid;
     grid-template-columns: repeat(12, minmax(10px, 1fr));
@@ -361,10 +384,7 @@ footer .link {
         padding: 0% 0% 5% 0;
     }
     
-    .button-nav {
-        display: none;
-    }
-
+   
     #burger-menu {
     display: flex;
     align-items: center;
@@ -427,8 +447,8 @@ footer .link {
     }
 
   
-    h6 {
+    /* h6 {
 
-    }
+    } */
 
 }
